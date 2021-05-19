@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "144724565958",
+    "project_id": "plasmaforlife-94d6a",
+    "storage_bucket": "plasmaforlife-94d6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144724565958:android:3158f8b5a61a1f88f15cc7",
+        "android_client_info": {
+          "package_name": "com.NishthaRSainger.plasma_donation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144724565958-qkevv08plfbvt1hsbuokrm78uhpe81bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBD4NUUHlZvNXvlOQyrA03RR6TTcBhMnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144724565958-qkevv08plfbvt1hsbuokrm78uhpe81bd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
