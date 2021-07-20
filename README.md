@@ -6,6 +6,7 @@ The project aims at connecting plasma donators and receivers.
 
 * [Description](#description)
 * [Technology Stack](#technology-stack)
+* [Key Features](#key-features)
 * [Future Scope](#future-scope)
 * [Result](#result)
 
@@ -27,6 +28,11 @@ Tools and technologies that you learnt and used in the project.
 1. Flutter
 2. Firebase
 
+## Key Features
+ - American Sign Language interpreter
+ - Video calling integrated with the sign language interpreter
+ - Learning mechanism for communication
+ 
 ## Future scope
 Features aimed to be implemented in next phase :
 - [ ] Providing feature to capture images with camera having distance measuring feature
@@ -34,6 +40,13 @@ Features aimed to be implemented in next phase :
 
 ## Result   
 
-### PerfectFit
 
-![Result](https://github.com/Bhumika-Kothwal/Mind-Debuggers/blob/master/Images/App%20Images/App_img2.jpg)
+
+
+## Screenshots
+![ss1](https://user-images.githubusercontent.com/64562764/119234184-2228b800-bb4a-11eb-8ca2-6df865db5fac.gif)
+![ss2](https://user-images.githubusercontent.com/64562764/119236405-e1826c00-bb54-11eb-98d2-da221ed0884c.gif)
+
+
+* GitHub repo link: [https://github.com/pri-avhad/LetsSign]
+* Drive link: [Click here](https://drive.google.com/)
