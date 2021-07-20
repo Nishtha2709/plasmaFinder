@@ -11,32 +11,26 @@ The project aims at connecting plasma donators and receivers.
 * [Result](#result)
 
 ## Description
-This solution will help the customer buy their appropriate fit from anytime anywhere. 
-All they will need is a perfectly fitting garment (which the customer already owns) to find their perfect fit.   
+As covid cases grew, plasma became an important 
 
-We take input image of garment from user, from a certain mentioned height, which user already owns and fits user perfectly. 
-We now use this image and images of all different sizes of that garment given by seller which are stored in Firebase, to find the least closest fit to this given input using 
-ChangeDetection method which uses Unspuervised Machine Learning Algorithms like PCA and K-Means Clustering.
-We use few conditions and finally our solution gives user the output of his/her perfect fit size.
-
-(More Detailed Explaination can be found in [#1](https://github.com/Bhumika-Kothwal/Mind-Debuggers/pull/1) and [#2](https://github.com/Bhumika-Kothwal/Mind-Debuggers/pull/2))
 
 ## Technology stack
 
-Tools and technologies that you learnt and used in the project.
+Tools and technologies learnt and used in the project.
 
 1. Flutter
 2. Firebase
+3. Google Maps API
 
 ## Key Features
- - American Sign Language interpreter
- - Video calling integrated with the sign language interpreter
- - Learning mechanism for communication
+ - Donators can register themselves on the app.
+ - Requestors can contact the donators registered, by finding the donators nearest to them.
+ - When a requestor requests for plasma, all the nearby donators have been
  
 ## Future scope
 Features aimed to be implemented in next phase :
-- [ ] Providing feature to capture images with camera having distance measuring feature
-- [ ] Providing separate login for Buyers and Sellers in the android app.
+- [ ] since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
+- [ ] Information of nearest blood banks can also be incorporated.
 
 ## Result   
 
