@@ -3,12 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
-//
-import 'main.dart';
+import 'homePage.dart';
 
 class DonorInputPage extends StatefulWidget {
-  // double _lat, _lng;
-  // DonorInputPage(this._lat, this._lng);
   @override
   _DonorInputPageState createState() => _DonorInputPageState();
 }
@@ -27,12 +24,16 @@ class _DonorInputPageState extends State<DonorInputPage> {
   var formattedDate;
   int flag = 0;
   List<Placemark> placemark;
+  bool isChecked1 = false;
+  bool isChecked2 = false;
+  bool isChecked3 = false;
+  bool isChecked4 = false;
+
+
   @override
   void initState() {
     super.initState();
     getCurrentLocation();
-    //_loadCurrentUser();
-    //getAddress();
   }
 
   void getCurrentLocation() async {
@@ -40,12 +41,13 @@ class _DonorInputPageState extends State<DonorInputPage> {
     print(Position);
     setState(() {
       position = res;
-      // _child = mapWidget();
     });
 
     print(position.latitude);
     print(position.longitude);
   }
+
+
   Future<Null> _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
         context: context,
@@ -86,16 +88,6 @@ class _DonorInputPageState extends State<DonorInputPage> {
           );
         });
   }
-
-  // void getAddress() async {
-  //   placemark =
-  //   await placemarkFromCoordinates(position.latitude, position.longitude);
-  //   _address = placemark[0].name.toString() +
-  //       "," +
-  //       placemark[0].locality.toString() +
-  //       ", Postal Code:" +
-  //       placemark[0].postalCode.toString();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -188,8 +180,9 @@ class _DonorInputPageState extends State<DonorInputPage> {
                               color: Color.fromARGB(1000, 221, 46, 68),
                             ),
                           ),
-                          validator: (value) => value.isEmpty
-                              ? "Quantity field can't be empty"
+                          validator: (value) =>
+                          value.isEmpty
+                              ? "Name field can't be empty"
                               : null,
                           onSaved: (value) => _name = value,
                           keyboardType: TextInputType.text,
@@ -205,16 +198,38 @@ class _DonorInputPageState extends State<DonorInputPage> {
                               color: Color.fromARGB(1000, 221, 46, 68),
                             ),
                           ),
-                          validator: (value) => value.isEmpty
-                              ? "Phone Number field can't be empty"
-                              : null,
+                          validator: (value) =>
+                          value.isEmpty
+                              ? "Age field can't be empty"
+                              : checkAge(int.parse(value)),
                           onSaved: (value) => _age = value,
                           maxLength: 3,
                           keyboardType: TextInputType.number,
                         ),
                       ),
+
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(18.0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: 'Weight(in kgs)',
+                            icon: Icon(
+                              FontAwesomeIcons.sortNumericUp,
+                              color: Color.fromARGB(1000, 221, 46, 68),
+                            ),
+                          ),
+                          validator: (value) =>
+                          value.isEmpty
+                              ? "Weight field cannot be empty"
+                              : checkWeight(int.parse(value)),
+                          onSaved: (value) => _age = value,
+                          maxLength: 3,
+                          keyboardType: TextInputType.number,
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(18.0),
                         child: Row(
                           children: <Widget>[
                             IconButton(
@@ -242,7 +257,8 @@ class _DonorInputPageState extends State<DonorInputPage> {
                               color: Color.fromARGB(1000, 221, 46, 68),
                             ),
                           ),
-                          validator: (value) => value.isEmpty
+                          validator: (value) =>
+                          value.isEmpty
                               ? "Phone Number field can't be empty"
                               : null,
                           onSaved: (value) => _contactNumber = value,
@@ -253,24 +269,109 @@ class _DonorInputPageState extends State<DonorInputPage> {
                       SizedBox(
                         height: 30.0,
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                          Checkbox(
+                              value: isChecked1,
+                              onChanged: (bool b) {
+                                setState(() {
+                                  isChecked1 = b;
+                                });
+                              }
+                            ),
+                            Text(
+                              "I have been pregnant once or more"
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Checkbox(
+                                value: isChecked2,
+                                onChanged: (bool b) {
+                                  setState(() {
+                                    isChecked2 = b;
+                                  });
+                                }
+                            ),
+                            Text(
+                                "I was asymptomatic"
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Checkbox(
+                                value: isChecked3,
+                                onChanged: (bool b) {
+                                  setState(() {
+                                    isChecked3 = b;
+                                  });
+                                }
+
+                            ),
+                            Text(
+                                "I have Diabetes or Hypertension"
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Checkbox(
+                                value: isChecked4,
+                                onChanged: (bool b) {
+                                  setState(() {
+                                    isChecked4 = b;
+                                  });
+                                }
+                            ),
+                            Text(
+                                "I have chronic lung/kidney/liver/heart disease"
+                            ),
+                          ],
+                        ),
+                      ),
+
                       RaisedButton(
                         onPressed: () {
-                          if (!formkey.currentState.validate()) return;
-                          formkey.currentState.save();
-                          final Map<String, dynamic> DonorDetails = {
-                            'bloodGroup': _selected,
-                            'name': _name,
-                            'covidPositiveDate': formattedDate,
-                            'contactNumber': _contactNumber,
-                            'age':_age,
-                            'location': new GeoPoint(position.latitude, position.longitude),
-                            'address': _address,
-                          };
-                          FirebaseFirestore.instance.collection('donors').add(DonorDetails).then((result) {
-                            dialogTrigger(context);
-                          }).catchError((e) {
-                            print(e);
-                          });
+                          if(isChecked1 || isChecked2 || isChecked3 || isChecked4){
+                            displayMessage();
+                          }
+
+                          else if (!formkey.currentState.validate()) return;
+                          else {
+                            formkey.currentState.save();
+                            final Map<String, dynamic> DonorDetails = {
+                              'bloodGroup': _selected,
+                              'name': _name,
+                              'covidPositiveDate': formattedDate,
+                              'contactNumber': _contactNumber,
+                              'age': _age,
+                              'location': new GeoPoint(
+                                  position.latitude, position.longitude),
+                              'address': _address,
+                            };
+                            FirebaseFirestore.instance.collection('donors').add(
+                                DonorDetails).then((result) {
+                              dialogTrigger(context);
+                            }).catchError((e) {
+                              print(e);
+                            });
+                          }
                         },
                         textColor: Colors.white,
                         padding: EdgeInsets.only(left: 5.0, right: 5.0),
@@ -289,5 +390,31 @@ class _DonorInputPageState extends State<DonorInputPage> {
       ),
     );
   }
-}
 
+  checkAge(int value){
+    if(value<18 || value>65)
+         return "Sorry, you cannot donate plasma";
+    else return null;
+  }
+
+  checkWeight(int value){
+    if(value<50)
+      return "Sorry, you cannot donate";
+  }
+  void displayMessage() {
+    showDialog(context: context,
+        builder: (BuildContext context) {
+          AlertDialog dialog = AlertDialog(
+            content: Text("Sorry! you are not eligible to donate plasma"),
+            actions: [
+              FlatButton(onPressed: () {
+                Navigator.of(context).pop();
+              },
+                  child: Text("Okay")
+              )
+            ],
+          );
+          return dialog;
+        });
+  }
+}
