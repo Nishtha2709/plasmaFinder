@@ -1,39 +1,77 @@
 # Plasma Finder
-The project aims at connecting plasma donators and receivers.
+The project aims at being a connect between plasma donors and receivers.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [Description](#description)
 * [Technology Stack](#technology-stack)
+* [Key Features](#key-features)
 * [Future Scope](#future-scope)
 * [Result](#result)
 
 ## Description
-This solution will help the customer buy their appropriate fit from anytime anywhere. 
-All they will need is a perfectly fitting garment (which the customer already owns) to find their perfect fit.   
+Motivation for this project was the upsurge of covid cases and exceeding need of plasma all over the country.
+Plasma was found to be a cure for covid beacause when an infected plasma is injected into 
 
-We take input image of garment from user, from a certain mentioned height, which user already owns and fits user perfectly. 
-We now use this image and images of all different sizes of that garment given by seller which are stored in Firebase, to find the least closest fit to this given input using 
-ChangeDetection method which uses Unspuervised Machine Learning Algorithms like PCA and K-Means Clustering.
-We use few conditions and finally our solution gives user the output of his/her perfect fit size.
 
-(More Detailed Explaination can be found in [#1](https://github.com/Bhumika-Kothwal/Mind-Debuggers/pull/1) and [#2](https://github.com/Bhumika-Kothwal/Mind-Debuggers/pull/2))
+* GitHub repo link: [https://github.com/Nishtha2709/plasmaFinder]
+* Video of app: [Click here](https://drive.google.com/)
 
 ## Technology stack
 
-Tools and technologies that you learnt and used in the project.
+Tools and technologies learnt and used in the project.
 
-1. Flutter
-2. Firebase
+ - Languages
+     1. Dart
+ - Tools
+     1. Flutter
+     2. Firebase
+     3. Google Maps API
 
-## Future scope
-Features aimed to be implemented in next phase :
-- [ ] Providing feature to capture images with camera having distance measuring feature
-- [ ] Providing separate login for Buyers and Sellers in the android app.
+## Key Features
+ - people can register themselves as donors
+ - Requestors can find donors nearby them
+ - When a requestor requests for plasma, the app zooms into the current location of the requestor
+ - Requestor can then choose from the suitable blood group
+ - Requestor can contact the donor by call or text
+
+## File Structure
+
+.
+|___plasma_finder
+|        |____assets
+|        |____pubspec.yaml
+|        |____android
+|        |____ios
+|        |____test
+|        |____lib
+|              |____utils
+|              |____models
+|              |____screens
+|              |____main.dart
+
+
+# Getting Started
+
+## Prerequisite
+ - flutter SDK
+
+## Installation
+ - [copy text="Copy the Text" text="Text Copied!" tag="button"]12345[/copy]
+ 
+
 
 ## Result   
 
-### PerfectFit
+## Screenshots
+![ss1](https://user-images.githubusercontent.com/64562764/119234184-2228b800-bb4a-11eb-8ca2-6df865db5fac.gif)
+![ss2](https://user-images.githubusercontent.com/64562764/119236405-e1826c00-bb54-11eb-98d2-da221ed0884c.gif)
 
-![Result](https://github.com/Bhumika-Kothwal/Mind-Debuggers/blob/master/Images/App%20Images/App_img2.jpg)
+
+## Future scope
+Features aimed to be implemented in next phase :
+- [ ] since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
+- [ ] Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
+
+
