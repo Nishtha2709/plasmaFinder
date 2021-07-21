@@ -37,6 +37,7 @@ Tools and technologies learnt and used in the project.
  - Requestor can contact the donor by call or text
 
 ## File Structure
+
 .
 |___plasma_finder
 |        |____assets
@@ -51,13 +52,13 @@ Tools and technologies learnt and used in the project.
 |              |____main.dart
 
 
-## Getting Started
+# Getting Started
 
-# Prerequisite
+## Prerequisite
  - flutter SDK
 
-# Installation
- - [copy]hello wrold[/copy]
+## Installation
+ - [copy text="Copy the Text" text="Text Copied!" tag="button"]12345[/copy]
  
 
 
