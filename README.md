@@ -1,24 +1,39 @@
 # Plasma Finder
-The project aims at being a connect between plasma donors and receivers.
+#### The project aims at being a connect between plasma donors and receivers.
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
+# Table of Contents
 
-* [Description](#description)
-* [Technology Stack](#technology-stack)
-* [Key Features](#key-features)
-* [Future Scope](#future-scope)
+* [About the Project](#About-the-project)
+  - [Description](#description)
+  - [Tech Stack](#technology-stack)
+  - [Key Features](#key-features)
+  - [File Structure](#file-structure)
+* [Getting Started](#getting-started)
+  - [Prerequisite](#prerequisite)
+  - [Installation](#installation)
 * [Result](#result)
+* [Future Scope](#future-scope)
 
-## Description
+# About the Project
+
+### Description
 Motivation for this project was the upsurge of covid cases and exceeding need of plasma all over the country.
-Plasma was found to be a cure for covid beacause when an infected plasma is injected into 
+&nbsp;
+
+Plasma was found to be a cure for covid because when the plasma of a person infected with covid is injected into someone's body, it develops antibodies to fight the infection and hence a person develops shield against the virus.&nbsp;
+
+Anyone can be a donor (within the age group of 18 to 65) except those 
+- with weight less than 50 kgs
+
+- having Diabetes or Hypertension
+- who have been pregnant even once
+- with haemoglobin less than normal ranges
+- who had asymptomatic infection
+
+All these conditions have been taken care of when a user wants to register him/her as a donor in the app. So to connect donors and receivers this solution was developed.
 
 
-* GitHub repo link: [https://github.com/Nishtha2709/plasmaFinder]
-* Video of app: [Click here](https://drive.google.com/)
-
-## Technology stack
+### Technology stack
 
 Tools and technologies learnt and used in the project.
 
@@ -29,49 +44,62 @@ Tools and technologies learnt and used in the project.
      2. Firebase
      3. Google Maps API
 
-## Key Features
- - people can register themselves as donors
+### Key Features
+ - users can register themselves as donors
  - Requestors can find donors nearby them
- - When a requestor requests for plasma, the app zooms into the current location of the requestor
- - Requestor can then choose from the suitable blood group
+ - When a requestor requests for plasma, the app locates the current location of the requestor
+ - Requestor can then choose from the donors nearest to him/her and look for blood group which is required
  - Requestor can contact the donor by call or text
 
-## File Structure
+### File Structure
 
+```bash
 .
-|___plasma_finder
-|        |____assets
-|        |____pubspec.yaml
-|        |____android
-|        |____ios
-|        |____test
-|        |____lib
-|              |____utils
-|              |____models
-|              |____screens
-|              |____main.dart
+├── lib
+│   ├── customised
+│   │   ├── customDialogs.dart
+│   │   ├── customWaveIndicator.dart
+│   │   └── rippleIndicator.dart
+│   ├── generated_plugin_registrant.dart
+│   ├── main.dart
+│   ├── models
+│   │   └── Donor.dart
+│   └── screens
+│       ├── donor_input_page.dart
+│       ├── donors.dart
+│       ├── homePage.dart
+│       └── splash.dart
+├── pubspec.yaml
+├── README.md
 
+```
 
 # Getting Started
 
-## Prerequisite
+### Prerequisite
  - flutter SDK
 
-## Installation
- - [copy text="Copy the Text" text="Text Copied!" tag="button"]12345[/copy]
- 
+### Installation
+clone the repo
+ - git clone https://github.com/Nishtha2709/plasmaFinder
+
+### Usage
+install the apk or
+- flutter install
+
+### Result   
+
+* [GitHub repo link](https://github.com/Nishtha2709/plasmaFinder)
+* Video of app: [Click here](https://drive.google.com/)
+
+### Screenshots
 
 
-## Result   
 
-## Screenshots
-![ss1](https://user-images.githubusercontent.com/64562764/119234184-2228b800-bb4a-11eb-8ca2-6df865db5fac.gif)
-![ss2](https://user-images.githubusercontent.com/64562764/119236405-e1826c00-bb54-11eb-98d2-da221ed0884c.gif)
-
-
-## Future scope
+### Future scope
 Features aimed to be implemented in next phase :
-- [ ] since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
-- [ ] Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
+- since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
+- Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
+- donor once registered can also cancel their registration
 
 
