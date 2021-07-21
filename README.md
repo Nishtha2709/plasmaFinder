@@ -90,10 +90,31 @@ install the apk or
 ### Result   
 
 * [GitHub repo link](https://github.com/Nishtha2709/plasmaFinder)
-* Video of app: [Click here](https://drive.google.com/)
+* Video of app: [Click here](https://drive.google.com/file/d/1n6d9pgdAhTbiwObpMWVDyaOXCsBq99Xb/view?usp=sharing)
 
 ### Screenshots
-
+<img src="screenshots/logo.jpg"
+     alt="Logo/Splash Screen"
+     style="float:left,margin-right:20px;"
+     width="200"/>  <img src="screenshots/home_page_image.jpg"
+     alt="Home Screen"
+     style="float:left,margin-right:10px;"
+     width="200"/>  
+     
+<p><img src="screenshots/donor_input_page.gif"
+     alt="Donor Registration Page"
+     style="float:left,margin-right:10px;"
+     width="200"/>  <img src="screenshots/donors.gif"
+     alt="Donors"
+     style="float:left,margin-right:10px;"
+     width="200"/>  <img src="screenshots/plasma_near_you.gif"
+     alt="Donor near you"
+     style="float:left,margin-right:10px;"
+     width="200"/>  <img src="screenshots/call.gif"
+     alt="Contact the donor"
+     style="float:left,margin-right:10px;"
+     width="200"/>
+</p>
 
 
 ### Future scope
