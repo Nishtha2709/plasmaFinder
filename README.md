@@ -1,5 +1,5 @@
 # Plasma Finder
-The project aims at connecting plasma donators and receivers.
+The project aims at being a connect between plasma donors and receivers.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -11,36 +11,66 @@ The project aims at connecting plasma donators and receivers.
 * [Result](#result)
 
 ## Description
-As covid cases grew, plasma became an important 
+Motivation for this project was the upsurge of covid cases and exceeding need of plasma all over the country.
+Plasma was found to be a cure for covid beacause when an infected plasma is injected into 
 
+
+* GitHub repo link: [https://github.com/Nishtha2709/plasmaFinder]
+* Video of app: [Click here](https://drive.google.com/)
 
 ## Technology stack
 
 Tools and technologies learnt and used in the project.
 
-1. Flutter
-2. Firebase
-3. Google Maps API
+ - Languages
+     1. Dart
+ - Tools
+     1. Flutter
+     2. Firebase
+     3. Google Maps API
 
 ## Key Features
- - Donators can register themselves on the app.
- - Requestors can contact the donators registered, by finding the donators nearest to them.
- - When a requestor requests for plasma, all the nearby donators have been
+ - people can register themselves as donors
+ - Requestors can find donors nearby them
+ - When a requestor requests for plasma, the app zooms into the current location of the requestor
+ - Requestor can then choose from the suitable blood group
+ - Requestor can contact the donor by call or text
+
+## File Structure
+.
+|___plasma_finder
+|        |____assets
+|        |____pubspec.yaml
+|        |____android
+|        |____ios
+|        |____test
+|        |____lib
+|              |____utils
+|              |____models
+|              |____screens
+|              |____main.dart
+
+
+## Getting Started
+
+# Prerequisite
+ - flutter SDK
+
+# Installation
+ - [copy]hello wrold[/copy]
  
-## Future scope
-Features aimed to be implemented in next phase :
-- [ ] since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
-- [ ] Information of nearest blood banks can also be incorporated.
+
 
 ## Result   
-
-
-
 
 ## Screenshots
 ![ss1](https://user-images.githubusercontent.com/64562764/119234184-2228b800-bb4a-11eb-8ca2-6df865db5fac.gif)
 ![ss2](https://user-images.githubusercontent.com/64562764/119236405-e1826c00-bb54-11eb-98d2-da221ed0884c.gif)
 
 
-* GitHub repo link: [https://github.com/pri-avhad/LetsSign]
-* Drive link: [Click here](https://drive.google.com/)
+## Future scope
+Features aimed to be implemented in next phase :
+- [ ] since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
+- [ ] Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
+
+
