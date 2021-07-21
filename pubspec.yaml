@@ -41,12 +41,21 @@ dependencies:
   firebase_storage: ^8.0.6
   url_launcher: ^6.0.3
   location: ^4.1.1
+  animated_splash_screen: ^1.1.0
   geoflutterfire:
+
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_launcher_icons: ^0.9.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/plasma-logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -59,12 +68,23 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  fonts:
+    - family: Crimpson Text
+      fonts:
+        - asset: assets/crimpson/CrimsonText-Bold.ttf
+
+    - family: STIX Two Math
+      fonts:
+        - asset: assets/stix/STIXTwoMath-Regular.ttf
+
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.png
+    - assets/icon/plasma-logo.png
     - assets/customStyle.json
     - assets/marker2.png
     - assets/map1.jpeg
+    - assets/logo.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   child: Text(
                                     specify['bloodGroup'],
                                     style: TextStyle(
-                                      fontSize: 30.0,
+                                      fontSize: 20.0,
                                       color: Colors.white,
                                     ),
                                   ),
@@ -180,16 +180,6 @@ class _MyHomePageState extends State<MyHomePage> {
         .asUint8List();
   }
 
-  Set<Marker> _createMarker() {
-    return <Marker>[
-      Marker(
-        markerId: MarkerId("home"),
-        position: LatLng(position.latitude, position.longitude),
-        icon: BitmapDescriptor.fromBytes(markerIcon),
-      ),
-    ].toSet();
-  }
-
   Future<String> getJsonFile(String path) async {
     return await rootBundle.loadString(path);
   }
@@ -199,45 +189,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   getMarkerData() async {
-    // StreamBuilder(
-    //   stream: ,
-    // );
-   await FirebaseFirestore.instance
-       .collection('donors')
-        .get()
-   .then((docs) {
-   //   for (var message in docs.docs) {
-   //     print(message.data);
-   //   }
-   // });
-
-    //     .then((docs) {
-      if (docs.docs.isNotEmpty) {
-        setState(() {
-          for (int i = 0; i < docs.docs.length; ++i) {
-            initMarker(docs.docs[i].data(), docs.docs[i].id);
-          }
-        });
-
+      await for(var snapshot in FirebaseFirestore.instance.collection('donors').snapshots()) {
+        for (var message in snapshot.docs) {
+          // print(message.data());
+          print(message.data());
+          // print(message.id);
+          initMarker(message.data(),message.id);
+        }
       }
-    });
-    //     .then((donorData) {
-    //   if (donorData.docs.isNotEmpty) {
-    //     for (int i = 0; i < donorData.docs.length; i++) {
-    //       initMarker(donorData.docs[i].data(), donorData.docs[i].id);
-    //     }
-    //   }
-    // });
-  //   await for(var snapshot in FirebaseFirestore.instance.collection('donors').snapshots()){
-  //     for(var message in snapshot.docs){
-  //       // print(message.data());
-  //       print(message.data());
-  //       print(message.id);
-  //     }
-  //
-  //
-  //   }
-  // }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -247,8 +207,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
           'Plasma Finder',
           style: TextStyle(
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.w900,
+            // fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w800,
+            fontFamily: "STIX Two Math"
           ),
         ),
         actions: <Widget>[

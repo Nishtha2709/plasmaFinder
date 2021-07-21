@@ -69,8 +69,8 @@ class _DonorInputPageState extends State<DonorInputPage> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Success'),
-            content: Text('Blood Request Submitted'),
+            title: Text('Congratulations!'),
+            content: Text('You are a donor now'),
             actions: <Widget>[
               FlatButton(
                 onPressed: () {
@@ -98,10 +98,10 @@ class _DonorInputPageState extends State<DonorInputPage> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         title: Text(
-          "Donator Registration",
+          "Donor's Registration",
           style: TextStyle(
-            fontSize: 50.0,
-            fontFamily: "SouthernAire",
+            fontSize: 30.0,
+            // fontFamily: "SouthernAire",
             color: Colors.white,
           ),
         ),
@@ -182,7 +182,7 @@ class _DonorInputPageState extends State<DonorInputPage> {
                           ),
                           validator: (value) =>
                           value.isEmpty
-                              ? "Name field can't be empty"
+                              ? "Please enter your name"
                               : null,
                           onSaved: (value) => _name = value,
                           keyboardType: TextInputType.text,
@@ -200,7 +200,7 @@ class _DonorInputPageState extends State<DonorInputPage> {
                           ),
                           validator: (value) =>
                           value.isEmpty
-                              ? "Age field can't be empty"
+                              ? "Please enter your age"
                               : checkAge(int.parse(value)),
                           onSaved: (value) => _age = value,
                           maxLength: 3,
@@ -220,7 +220,7 @@ class _DonorInputPageState extends State<DonorInputPage> {
                           ),
                           validator: (value) =>
                           value.isEmpty
-                              ? "Weight field cannot be empty"
+                              ? "Please enter your weight"
                               : checkWeight(int.parse(value)),
                           onSaved: (value) => _age = value,
                           maxLength: 3,
@@ -259,7 +259,7 @@ class _DonorInputPageState extends State<DonorInputPage> {
                           ),
                           validator: (value) =>
                           value.isEmpty
-                              ? "Phone Number field can't be empty"
+                              ? "Please enter your phone number"
                               : null,
                           onSaved: (value) => _contactNumber = value,
                           maxLength: 10,
@@ -269,6 +269,7 @@ class _DonorInputPageState extends State<DonorInputPage> {
                       SizedBox(
                         height: 30.0,
                       ),
+
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -396,10 +397,9 @@ class _DonorInputPageState extends State<DonorInputPage> {
          return "Sorry, you cannot donate plasma";
     else return null;
   }
-
   checkWeight(int value){
     if(value<50)
-      return "Sorry, you cannot donate";
+      return "Sorry, you cannot donate plasma";
   }
   void displayMessage() {
     showDialog(context: context,

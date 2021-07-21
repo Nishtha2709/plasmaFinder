@@ -48,8 +48,8 @@ class _DonorsPageState extends State<DonorsPage> {
         title: Text(
           "Donors",
           style: TextStyle(
-            fontSize: 50.0,
-            fontFamily: "SouthernAire",
+            fontSize: 30.0,
+            fontFamily: "STIX Two Math",
             color: Colors.white,
           ),
         ),

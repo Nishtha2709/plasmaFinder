@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
       child: Container(
         height: _logoAnimation.value*250.0,
         width: _logoAnimation.value*250.0,
-        child: Image.asset("assets/logo.png"),
+        // child: Image.asset("assets/logo.png"),
       ),
     );
   }
