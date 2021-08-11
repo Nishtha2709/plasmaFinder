@@ -119,7 +119,7 @@ install the apk or
 
 ### Future scope
 Features aimed to be implemented in next phase :
-- since plasma is not a viable cure for covid now, this app can be tranformed into a blood donation app
+- since plasma is not a viable cure for covid now, this app can be transformed into a blood donation app
 - Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
 - donor once registered can also cancel their registration
 
