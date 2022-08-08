@@ -123,7 +123,3 @@ Features aimed to be implemented in next phase :
 - Information of nearest blood banks can also be incorporated where both donor and requestor can go to do the needful.
 - donor once registered can also cancel their registration
 
-### Team Members
-1. Nishtha Rajiv Sainger
-2. Bhumika Suresh Kothwal
-3. Neha Bhausaheb Shinde
